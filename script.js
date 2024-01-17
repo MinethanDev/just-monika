@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
             body.style.backgroundPosition = "center";
             body.style.backgroundRepeat = "no-repeat";
             
-            var randomImageIndex = Math.floor(Math.random() * 4) + 1; // Génère un nombre aléatoire entre 1 et 4
+            var randomImageIndex = Math.floor(Math.random() * 4) + 1;
             var randomImage = document.createElement("img");
             randomImage.setAttribute("src", "assets/img/chatbox/cb" + randomImageIndex + ".png");
             randomImage.setAttribute("alt", "Random Image");
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
             randomImage.style.bottom = "10px";
             randomImage.style.left = "50%";
             randomImage.style.transform = "translateX(-50%)";
-            randomImage.style.width = "1300px"; // Ajuster la taille de l'image selon vos besoins
+            randomImage.style.width = "1300px";
             document.body.appendChild(randomImage);
         }
     });
