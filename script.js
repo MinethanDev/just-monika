@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     var backgroundMusic = document.querySelector("audio");
     
     backgroundMusic.setAttribute("src", "assets/audio/music.mp3");
-    backgroundMusic.play();
+    
+    document.addEventListener("click", function() {
+        backgroundMusic.play();
+    });
 
     var zoomLevel = 1;
     var verticalPosition = 0;
