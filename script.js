@@ -35,7 +35,17 @@ document.addEventListener("DOMContentLoaded", function() {
         verticalPosition += 10;
         yuriXpos += 5
 
-        sayoriImage.style.transform = "scale(" + zoomLevel + ") translateY(" + verticalPosition + "px)";
+        if (window.innerWidth <= 768) {
+            if (verticalPosition < 100){
+                sayoriImage.style.transform = "scale(" + zoomLevel + ") translateY(" + verticalPosition + "px)";
+            }
+            else {
+                sayoriImage.style.transform = "scale(" + zoomLevel + ") translateY(100px)";
+            }
+        } else {
+            sayoriImage.style.transform = "scale(" + zoomLevel + ") translateY(" + verticalPosition + "px)";
+        }
+
         natsukiImage.style.transform = "scale(" + zoomLevel + ") translateY(" + verticalPosition + "px)";
         yuriImage.style.transform = "scale(" + zoomLevel + ") translateY(" + verticalPosition + "px) translateX(" + yuriXpos + "px)";
 
@@ -53,17 +63,22 @@ document.addEventListener("DOMContentLoaded", function() {
             body.style.backgroundSize = "cover";
             body.style.backgroundPosition = "center";
             body.style.backgroundRepeat = "no-repeat";
+
+            if (window.innerWidth <= 768) {
+                var creditParagraph = document.querySelector(".credit");
+                creditParagraph.style.display = "none";
+            }
             
             var randomImageIndex = Math.floor(Math.random() * 4) + 1;
             var randomImage = document.createElement("img");
             randomImage.setAttribute("src", "assets/img/chatbox/cb" + randomImageIndex + ".png");
             randomImage.setAttribute("alt", "Random Image");
-            randomImage.style.position = "fixed";
-            randomImage.style.bottom = "10px";
-            randomImage.style.left = "50%";
-            randomImage.style.transform = "translateX(-50%)";
-            randomImage.style.width = "1300px";
-            document.body.appendChild(randomImage);
+            
+            var chatboxDiv = document.createElement("div");
+            chatboxDiv.classList.add("chatbox");
+            chatboxDiv.appendChild(randomImage);
+            
+            document.body.appendChild(chatboxDiv);            
         }
     });
 });

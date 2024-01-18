@@ -31,3 +31,65 @@ body {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
 }
+
+/* Just Monika button */
+#monikaButton {
+    max-width: 100%;
+    height: auto;
+    max-width: 45vh;
+}
+
+@media screen and (min-width: 768px) {
+    #monikaButton {
+        max-width: 75vh;
+    }
+}
+
+/* Girls Responsiveness */
+
+@media screen and (max-width: 1290px) {
+    #natsukiImage, #yuriImage {
+        display: none;
+    }
+
+    #sayoriImage {
+        position: fixed;
+        bottom: 0;
+        left: 5px;
+        max-width: 100%;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 1910px) {
+    #yuriImage {
+        display: none;
+    }
+}
+
+/* Chatbox */
+.chatbox {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chatbox img {
+    width: 1300px;
+    height: 100%;
+    max-width: 120vh;
+}
+
+@media screen and (max-width: 960px) {
+    .chatbox img {
+        max-width: 70vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chatbox img {
+        max-width: 40vh;
+    }
+}
