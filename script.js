@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 creditParagraph.style.display = "none";
             }
             
-            var randomImageIndex = Math.floor(Math.random() * 4) + 1;
+            var randomImageIndex = Math.floor(Math.random() * 6) + 1;
             var randomImage = document.createElement("img");
             randomImage.setAttribute("src", "assets/img/chatbox/cb" + randomImageIndex + ".png");
             randomImage.setAttribute("alt", "Random Image");
