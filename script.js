@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var monikaButton = document.getElementById("monikaButton");
-    var sayoriImage = document.getElementById("sayoriImage");
-    var natsukiImage = document.getElementById("natsukiImage");
-    var yuriImage = document.getElementById("yuriImage");
-    var body = document.body;
-    var audio = document.querySelector("audio");
-    var clickSound = document.getElementById("clickSound");
+var monikaButton = document.getElementById("monikaButton");
+var sayoriImage = document.getElementById("sayoriImage");
+var natsukiImage = document.getElementById("natsukiImage");
+var yuriImage = document.getElementById("yuriImage");
+var body = document.body;
+var audio = document.querySelector("audio");
+var clickSound = document.getElementById("clickSound");
+var backgroundMusic = document.querySelector("audio");
 
-    var backgroundMusic = document.querySelector("audio");
+document.addEventListener("DOMContentLoaded", function() {
     
     backgroundMusic.setAttribute("src", "assets/audio/music.mp3");
     

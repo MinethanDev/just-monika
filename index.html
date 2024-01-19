@@ -7,8 +7,28 @@
     <link rel="stylesheet" href="style.css">
     <title>Just Monika</title>
 </head>
-<body>
+<body onkeydown="checkKeyPress(event)">
     
+    <script>
+        let userInput = '';
+
+        function checkKeyPress(event) {
+            userInput += event.key.toLowerCase()
+
+            if(userInput.includes('monika')) {
+
+                document.getElementById("monikaButton").remove();
+                document.getElementById("sayoriImage").remove();
+                document.getElementById("natsukiImage").remove();
+                document.getElementById("yuriImage").remove();
+
+                document.body.style.backgroundImage = "url('assets/img/easteregg.png')";
+
+                userInput = '';
+            }
+        }
+    </script>
+
     <audio id="hoverSound" src="assets/audio/hover.mp3" preload="auto"></audio>
     <audio id="clickSound" src="assets/audio/click.mp3" preload="auto"></audio>
 
